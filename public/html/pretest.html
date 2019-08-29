@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Запуск теста</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <div class = 'main'>
+        <div class = 'header'>
+            <h1>ADA</h1>
+            <div class = 'header_menu_static'>
+                <ul class = 'h_menu_stat_ul'>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </div>
+            
+            <div class = 'header_menu'>
+                <ul class = 'h_menu_ul'>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </div>
+            <div class = 'lines'><span class = 'lines_span'></span></div>
+        </div>
+        <div class = 'shadow'></div>
+        <div class = 'main_content'>
+            <div class = 'page'>
+                <p class = 'page_title p_start'>Запуск теста</p>
+                <p class = 'page_title p_tests'>Запущенные тесты</p>
+                <p class = 'page_title p_quests'>Сохраненные вопросы</p>
+                <div class = 'drop' id = 'test2'>
+                    <ul class = 'drop_ul'>
+                        <li><a class = 'drop_btn drop_start' href="#">Запуск теста</a></li>
+                        <li><a class = 'drop_btn drop_tests' href="#">Запущенные тесты</a></li>
+                        <li><a class = 'drop_btn drop_quests' href="#">Сохраненные вопросы</a></li>
+                        <li><a class = 'drop_btn drop_stats' href="#">Статистика</a></li>
+                    </ul>
+                </div>
+                <div class = 'arrow' id = 'test1'></div>
+            </div>
+            <div class = 'content'>
+                <div class = 'shell shell_start_test'>
+                    <p class = 'title_start'>Запуск теста</p>
+                    <div class = 'department_block'>
+                        <div class = 'dep_title'>
+                            <p>Кафедра</p>
+                        </div>
+                        <div class = 'dep_list'>
+                           <form>
+                                <select class = 'department'>
+                                    <option>Анатомия</option>
+                                    <option>Гистология</option>
+                                    <option>Микробиология</option>
+                                    <option>Оперативная хирургия</option>
+                                    <option>Биология</option>
+                                    <option>Биохимия</option>
+                                    <option>Что-нибудь еще</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                    <div class = 'test_block'>
+                        <div class = 'test_title'>
+                            <p>Тест</p>
+                        </div>
+                        <div class = 'test_list'>
+                            <form>
+                                <select class = 'test'>
+                                    <option>ЦНС</option>
+                                    <option>Гистология</option>
+                                    <option>Микробиология</option>
+                                    <option>Оперативная хирургия</option>
+                                    <option>Биология</option>
+                                    <option>Биохимия</option>
+                                    <option>Что-нибудь еще</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                    <div class = 'interval_block'>
+                        <p>Интервал</p>
+                        <div class = 'interval'>
+                            <p>От</p>
+                            <div class = 'from'>
+                                <form>
+                                    <input class = 'num_input' type = "number" placeholder = '0' max = '999'>
+                                </form>
+                            </div>
+                            <p>До</p>
+                            <div class = 'to'>
+                                <form>
+                                    <input class = 'num_input'  type = "number" max = '999'>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = 'numquest_block'>
+                        <p>Количество вопросов</p>
+                        <form>
+                            <input class = 'num_input'  type = "number" placeholder = '20' max = '999'>
+                        </form>
+                    </div>
+                    <div class = 'mixquest_block'>
+                        <p>Перемешивать вопросы</p>
+                        <div class = 'switch'>
+                            <form>
+                                <input type = 'checkbox' id = 'cbxF' style = 'display: none'>
+                                <label for = 'cbxF' class = 'toggle' id = 'first'><span></span></label>
+                            </form>
+                        </div>
+                    </div>
+                    <div class = 'mixansw_block'>
+                        <p>Перемешивать ответы</p>
+                        <div class = 'switch'>
+                            <form>
+                                <input type = 'checkbox' id = 'cbxS' style = 'display: none'>
+                                <label for = 'cbxS' class = 'toggle' id = 'l2'><span></span></label>
+                            </form>
+                        </div>
+                    </div>
+                    <div class = 'timer_block'>
+                        <p>Включить таймер</p>
+                        <div class = 'switch'>
+                            <form>
+                                <input type = 'checkbox' id = 'cbxT' style = 'display: none'>
+                                <label for = 'cbxT' class = 'toggle'><span></span></label>
+                            </form>
+                        </div>
+                    </div>
+                    <div class = 'save_quests'>
+                        <p>Сохранять вопросы</p>
+                        <div class = 'switch'>
+                            <form>
+                                <input type = 'checkbox' id = 'cbxFth' style = 'display: none'>
+                                <label for = 'cbxFth' class = 'toggle'><span></span></label>
+                            </form>
+                        </div>
+                    </div>
+                    <div class = 'start_block'>
+                        <form class = 'start_form'>
+                            <button class = 'start_btn'>
+                                <p>Начать тест</p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class = 'shell shell_list'>
+                    <div class = 'list_block'>
+                        <p class = 'title_list'>Запущенные тесты</p>
+                        <ul class = 'list_of_tests'>
+                            <li>
+                                <a href = '#'>Пример теста №1</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Тест по анатомии</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Тест по гистологии</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Тест по мехинике небесных тел в условиях тотального контроля со стороны омерики</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Просто тест</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>   
+                
+                <div class = 'shell shell_quest'>
+                    <div class = 'quest_block'>
+                        <p class = 'title_quest'>Сохраненные вопросы</p>
+                        <ul class = 'list_of_quests'>
+                            <li>
+                                <a href = '#'>Вопрос №1</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Вопрос из теста по анатомии</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Вопрос о смысле жизни из теста по механике лежачих тел</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Вопрос, который невозможно запомнить</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Просто вопрос</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Вопрос №1</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Вопрос из теста по анатомии</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Вопрос о смысле жизни из теста по механике лежачих тел</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Вопрос, который невозможно запомнить</a>
+                            </li>
+                            <li>
+                                <a href = '#'>Просто вопроc</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class = 'shell shell_statistics'>
+                    <p>Статистика</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+<!--
+    <script src = "javascript/modules/pretest_room/dropModule.js"></script>
+    <script src = "javascript/modules/pretest_room/pages.js"></script>
+-->
+    <script src = 'https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script src = '../javascripts/modules/pretest_room/dropModule.js'></script>
+    <script src = '../javascripts/modules/pretest_room/pagesModule.js'></script>
+</body>
+</html>
