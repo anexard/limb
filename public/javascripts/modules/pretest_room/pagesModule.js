@@ -18,14 +18,5 @@ $(window).ready(() => {
                 if (event.target.className == el) return el;
             }))]).fadeIn(200);
         })();
-        
-//        console.log(shells);
-//        console.log($(shells[3]).css('display'));
-//        console.log(buttons);
-//        console.log(event.target.className);
-////        if(event.target.className == 'drop_btn drop_tests') {
-////            $('.shell_start_test').fadeOut(0);
-////            $('.shell_list').fadeIn(200);
-////        }
     });
 });

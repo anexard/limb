@@ -46,6 +46,11 @@ html, body {
     color: #f8b5c4;
 }
 
+.header h1 span {
+    position: absolute;
+    font-size: 10px;
+}
+
 .lines {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -295,7 +300,9 @@ html, body {
 
 /* Убираем стрелочки в инпутах */
 .num_input::-webkit-outer-spin-button,
-.num_input::-webkit-inner-spin-button {
+.num_input::-webkit-inner-spin-button,
+.timerInput::-webkit-inner-spin-button,
+.timerInput::-webkit-outer-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     appearance: none;
     -webkit-appearance: none;
@@ -350,14 +357,16 @@ html, body {
 #cbxF:checked + .toggle:before,
 #cbxS:checked + .toggle:before,
 #cbxT:checked + .toggle:before,
-#cbxFth:checked + .toggle:before {
+#cbxFth:checked + .toggle:before,
+#cbxSx:checked + .toggle:before {
     background: rgba(248, 181, 196, .3);
 }
 
 #cbxF:checked + .toggle span,
 #cbxS:checked + .toggle span,
 #cbxT:checked + .toggle span,
-#cbxFth:checked + .toggle span{
+#cbxFth:checked + .toggle span,
+#cbxSx:checked + .toggle span {
     background: rgba(248, 181, 196, 1);
     -webkit-transform: translateX(20px);
     transform: translateX(20px);
@@ -367,7 +376,27 @@ html, body {
     box-shadow: 0 3px 8px rgba(79, 46, 220, .2);
 }
 
-.start_btn {
+/*** For timer input ***/
+
+.timerInput {
+    display: none;
+    width: 40px;
+    text-align: center;
+
+    outline: none;
+}
+
+.timer_block .switch form {
+    display: flex;
+}
+
+.timer_block .switch form div:first-child {
+    margin-right: 10px;
+}
+
+/*** ***/
+
+.submit {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -391,7 +420,7 @@ html, body {
     cursor: pointer;
 }
 
-.start_btn:hover, .num_input:hover, .department:hover {
+.submit:hover, .num_input:hover, .department:hover {
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
     border-color: #d1d1d1;
@@ -548,6 +577,12 @@ html, body {
         font-family: open sans, sans-serif;
         border-bottom: 1px solid #e1e0e0;
     }
+
+    .shell_list, .shell_quest, .shell_statistics {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -579,7 +614,6 @@ html, body {
     }
     
     .shell_start_test {
-/*        grid-area: start;*/
         grid-column: 1/2;
         grid-row: 1/3;
     }
@@ -587,20 +621,23 @@ html, body {
     .shell_list {
         grid-column: 2/3;
         grid-row: 1/2;
-/*        display: block;*/
-/*        grid-area: list;*/
+        height: 150px;
+        align-self: center;
     }
     
     .shell_quest {
         grid-column: 2/3;
         grid-row: 2/12;
-/*        grid-area: quest;*/
     }
     
     .shell_statistics {
-        border: 1px solid #000;
-/*        height: 450px;*/
         grid-column: 1/2;
         grid-row: 3/12;
     }
+}
+
+/* For future changes */
+.save_quests,
+.show_answ {
+    display: none;
 }

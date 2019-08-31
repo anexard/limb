@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/testroom.css">
+</head>
+<body>
+<div class = 'main'>
+        <div class = 'header'>
+            <h1>ADA</h1>
+            <div class = 'header_menu_static'>
+                <ul class = 'h_menu_stat_ul'>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </div>
+            
+            <div class = 'header_menu'>
+                <ul class = 'h_menu_ul'>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </div>
+            <div class = 'lines'><span class = 'lines_span'></span></div>
+        </div>
+        <div class = 'shadow'></div>
+        <div class = 'main_content'>
+            <div class = 'page'>
+                <p class = 'page_title p_start'>Запуск теста</p>
+                <p class = 'page_title p_tests'>Запущенные тесты</p>
+                <p class = 'page_title p_quests'>Сохраненные вопросы</p>
+                <div class = 'drop' id = 'test2'>
+                    <ul class = 'drop_ul'>
+                        <li><a class = 'drop_btn drop_start' href="#">Запуск теста</a></li>
+                        <li><a class = 'drop_btn drop_tests' href="#">Запущенные тесты</a></li>
+                        <li><a class = 'drop_btn drop_quests' href="#">Сохраненные вопросы</a></li>
+                        <li><a class = 'drop_btn drop_stats' href="#">Статистика</a></li>
+                    </ul>
+                </div>
+                <div class = 'arrow' id = 'test1'></div>
+            </div>
+            <div class = 'content'>
+                <div class = 'shell shell_test'>
+                    <div class = 'chars'>   
+                        <p class = test_title><span class = 'name_of_char'>Название</span><span class = 'char'></span></p>
+                        <p class = 'test_interval'><span class = 'name_of_char'>Интервал</span><span class = 'char'></span></p>
+                        <p class = 'test_quantity'><span class = 'name_of_char'>Количество</span><span class = 'char'></span></p>
+                        <p class = 'test_current'><span class = 'name_of_char'>Текущий</span><span class = 'char cur'></span>&nbsp;<span class = 'all'> / </span></p>
+                        <p class = 'test_right'><span class = 'name_of_char'>Верно</span><span class = 'char'></span></p>
+                        <p class = 'test_wrong'><span class = 'name_of_char'>Неверно</span><span class = 'char'></span></p>
+                        <p class = 'test_timer'><span class = 'name_of_char'>Таймер</span><span class = 'char'></span></p>
+                    </div>
+
+                    <div class = 'form_of_test'>
+                        <h1 class = 'title'></h1>
+                        <form class = 'answers'>
+                            
+                        </form>
+                        <form class = 'button'>
+                            <input type="button" class = 'submit' value = 'Следующий вопрос'>
+                        </form>
+                    </div>
+                    
+                    <div class = 'results'>
+                        <div>
+                            <h1 class = 'title_result'>Результат:</h1>
+                            <p class = test_title>Название<span class = 'char'></span></p>
+                            <p class = 'test_interval'>Интервал: <span class = 'char'></span></p>
+                            <p class = 'test_quantity'>Количество: <span class = 'char'></span></p>
+                            <p class = 'test_current'>Текущий: <span class = 'char cur'></span> / <span class = 'all'></span></p>
+                            <p class = 'test_right'>Верно: <span class = 'char'></span></p>
+                            <p class = 'test_wrong'>Неверно: <span class = 'char'></span></p>
+                        </div>
+                        <input class = 'endTest' type="button" value = 'Завершить тест'>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+</div>
+    
+    <script src = 'https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script src = '../javascripts/modules/testroom/loadTest.js'></script>
+    <script src = '../javascripts/modules/pretest_room/dropModule.js'></script>
+    <script src = '../javascripts/modules/pretest_room/pagesModule.js'></script>
+    <script src = '../javascripts/modules/testroom/endtest.js'></script>
+</body>
+</html>
